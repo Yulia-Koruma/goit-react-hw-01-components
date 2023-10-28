@@ -1,18 +1,21 @@
+import { StatisticsSection, TitleBox, StatisticsTitle, StatsList, StatsItem, StatsPercentages, StatsLabel } from "./Statistics.styled";
+
 export const Statistic = ({elements}) => {
 return (
 
-<section className="statistics">
-  <h2 className="title">Upload stats</h2>
-  
-  <ul className="stat-list">
+<StatisticsSection>
+  <TitleBox>
+  <StatisticsTitle>Upload stats</StatisticsTitle>
+  </TitleBox>
+  <StatsList>
     {elements.map((item, i) => 
 
-    ( <li className="item" key={item.id} id={item.id} index={i}>
-      <span className="label">{item.label}</span>
-      <span className="percentage">{item.percentage}%</span>
-    </li>))}
+    ( <StatsItem key={item.id} id={item.id} index={i}>
+      <StatsLabel>{item.label}</StatsLabel>
+      <StatsPercentages>{item.percentage}%</StatsPercentages>
+    </StatsItem>))}
     
-  </ul>
-</section>
+  </StatsList>
+</StatisticsSection>
 );
 };

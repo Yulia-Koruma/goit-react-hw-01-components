@@ -1,8 +1,10 @@
-import { FriendsListItem } from "./FriendListItem"
+import { FriendsListItem } from '../friendListItem/FriendListItem'
+import { FriendList, FriendSection } from "./FriendsList.styled"
 
 export const FriendsList = ({friends}) => {
 return(
-    <ul className="friend-list">
+  <FriendSection>
+    <FriendList>
       {
         friends.map(friend => (
           <FriendsListItem
@@ -14,7 +16,8 @@ return(
       )
       )
     }
-</ul>
+</FriendList>
+</FriendSection>
 );
 };
 
