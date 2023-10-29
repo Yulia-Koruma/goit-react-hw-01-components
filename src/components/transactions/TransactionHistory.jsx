@@ -1,4 +1,4 @@
-import {Table, TableTitle, Tr, Td, TdType, TBody, TrBody  } from "./TransactionHistory.styled";
+import {Table, TableTitle, Tr, Td } from "./TransactionHistory.styled";
 export const TransactionHistory = ({items}) => {
 
 return (

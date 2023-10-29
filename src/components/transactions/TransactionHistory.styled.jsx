@@ -36,11 +36,3 @@ export const Td = styled.td`
 outline: 0.5px solid #A8A8A8;
 `;
 
-
-export const TBody= styled.td`
-
-`;
-
-export const TrBody= styled.td`
-
-`;
