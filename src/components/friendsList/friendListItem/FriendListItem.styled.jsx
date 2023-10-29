@@ -10,6 +10,9 @@ box-shadow:
 display: flex;
 align-items: center;
 padding: 8px 10px;
+&:hover {
+    background: #ecf0f3;
+    box-shadow: inset -3px -3px 7px #ffffff, inset 3px 3px 5px #ceced1;}
 `;
 
 export const FriendStatus = styled.span`
@@ -19,14 +22,21 @@ export const FriendStatus = styled.span`
   height: 16px;
   border-radius: 50%;
   background-color: ${props => {
-    return props.isOnline ? 'green' : 'red';
+    return props.isOnline ? 'red' : 'green';
   }};
 `;
 
 export const FriendAvatar = styled.img`
-
+display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 `;
 
 export const FriendName = styled.p`
-
+  margin-left: 10px;
+  color: #402727;
+  text-shadow: 1px 1px 1px #fff;
+  font-size: 16px;
+  font-weight: 700;
 `;

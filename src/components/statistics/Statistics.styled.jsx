@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 
-const getRandomHexColor = idx =>
+const getRandomHexColor = 
+(index) =>
   `#${Math.floor(Math.random() * 16777215)
     .toString(16)
     .padStart(6, 0)}`;
@@ -13,10 +14,10 @@ export const StatisticsSection = styled.section`
 `;
 
 export const TitleBox = styled.div`
-max-width: 260px;
-background-color: #fff;
-padding: 20px 20px;
-margin: 0 auto;
+    max-width: 260px;
+    background-color: #fff;
+    padding: 20px 20px;
+    margin: 0 auto;
 
 `;
 
@@ -29,29 +30,29 @@ export const StatisticsTitle = styled.h2`
 `;
 
 export const StatsList = styled.ul`
-display: flex;
-max-width: 260px;
-margin: 0 auto;
+    display: flex;
+    max-width: 260px;
+    margin: 0 auto;
 `;
 
 export const StatsItem = styled.ul`
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-width: 100%;
-padding: 8px 10px 8px ;
-color: #fff;
-gap: 10px;
-background-color: ${props => getRandomHexColor(props.index)}
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 8px 10px 8px ;
+    color: #fff;
+    gap: 10px;
+    background-color: ${props => getRandomHexColor(props.index)};
 `;
 
 export const StatsLabel = styled.ul`
-font-size: 12px;
-font-weight: 700;
+    font-size: 12px;
+    font-weight: 700;
 `;
 
 export const StatsPercentages = styled.ul`
-font-size: 14px;
-font-weight: 700;
+    font-size: 14px;
+    font-weight: 700;
 `;
