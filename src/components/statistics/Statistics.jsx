@@ -1,14 +1,16 @@
 import { StatisticsSection, TitleBox, StatisticsTitle, StatsList, StatsItem, StatsPercentages, StatsLabel } from "./Statistics.styled";
 
-export const Statistic = ({elements}) => {
+export const Statistic = ({stats, title}) => {
 return (
 
 <StatisticsSection>
+
   <TitleBox>
-  <StatisticsTitle>Upload stats</StatisticsTitle>
+ {title && <StatisticsTitle>{title}</StatisticsTitle>}
   </TitleBox>
+
   <StatsList>
-    {elements.map((item, i) => 
+    {stats.map((item, i) => 
 
     ( <StatsItem key={item.id} id={item.id} index={i}>
       <StatsLabel>{item.label}</StatsLabel>
